@@ -1,0 +1,10 @@
+name = "SIOC RDF"
+license = "GPLv3"
+description = "Hugo theme component for creating SIOC RDF for the site."
+tags = ["component", "rdf", "sioc", "output-format"]
+features = ["rdf"]
+min_version = "0.1"
+
+[author]
+name = "Yuki Ito"
+homepage = "https://acomagu.me"

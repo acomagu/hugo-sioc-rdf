@@ -1,0 +1,5 @@
+[mediaTypes."application/rdf+xml"]
+suffixes = ["rdf"]
+
+[outputFormats.RDF]
+mediaType = "application/rdf+xml"

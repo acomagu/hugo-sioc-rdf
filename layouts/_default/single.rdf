@@ -1,0 +1,19 @@
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:sioc="http://rdfs.org/sioc/ns#"
+         xmlns:dc="http://purl.org/dc/elements/1.1/"
+         xmlns:aowl="http://bblfish.net/work/atom-owl/2006-06-06/"
+         xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <sioc:Post rdf:about="{{ .Permalink }}">
+    <dc:title>{{ .Site.Title }}</dc:title>
+    <sioc:content>
+      <rdf:Description>
+        <rdf:type rdf:resource="http://bblfish.net/work/atom-owl/2006-06-06/Content"/>
+        <aowl:type>text/html</aowl:type>
+        <aowl:body rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">{{ .Page.Content | html }}</aowl:body>
+      </rdf:Description>
+    </sioc:content>
+    <sioc:content rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">{{ .Page.Content | html }}</sioc:content>
+    <sioc:content>{{ .Page.RawContent | html }}</sioc:content>
+    <content:encoded rdf:datatype="http://www.w3.org/1999/02/22-rdf-syntax-ns#HTML">{{ .Page.Content | html }}</content:encoded>
+  </sioc:Post>
+</rdf:RDF>
